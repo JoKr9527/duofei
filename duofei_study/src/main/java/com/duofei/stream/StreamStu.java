@@ -1,4 +1,4 @@
-package com.duofei.collector;
+package com.duofei.stream;
 
 import org.junit.Test;
 
@@ -6,7 +6,6 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.*;
 import java.util.stream.Collector;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
