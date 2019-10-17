@@ -5,8 +5,8 @@ spring:
     config:
       server:
         git:
-          uri: uri
-          search-paths:
+          uri: https://github.com/JoKr9527/duofei.git
+          search-paths: Spring_Cloud/
           username:
           password:
 server:
