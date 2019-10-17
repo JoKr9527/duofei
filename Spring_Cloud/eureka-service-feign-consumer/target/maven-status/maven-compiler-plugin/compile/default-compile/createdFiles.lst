@@ -1,0 +1,4 @@
+com\duofei\controller\ConsumerController.class
+com\duofei\service\HelloService.class
+com\duofei\bean\User.class
+com\duofei\ConsumerApplication.class

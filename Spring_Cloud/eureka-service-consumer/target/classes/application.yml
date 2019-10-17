@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: service-consumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1112/eureka/
+server:
+  servlet:
+    context-path: /consumer
+  port: 8081
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+ribbon:
+  ConnectTimeout: 2000
+  ReadTimeout: 2000
+  maxAutoRetries: 2
+  retryableStatusCodes: 500
