@@ -6,7 +6,7 @@ spring:
       server:
         git:
           uri: https://github.com/JoKr9527/duofei.git
-          search-paths: Spring_Cloud/
+          search-paths: Spring_Cloud/config-file
           username:
           password:
 server:
