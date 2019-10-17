@@ -1,5 +1,0 @@
-com\duofei\db\mongodb\MongodbTest.class
-com\duofei\db\redis\CacheTest.class
-com\duofei\db\mysql\MysqlTest.class
-com\duofei\db\redis\RedisTest.class
-com\duofei\db\mysql\CustomExpandTest.class
