@@ -1,13 +1,20 @@
 spring:
   application:
-    name: config-server
+    name: duofei
+  profiles:
+    active: dev,test
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/JoKr9527/duofei.git
-          search-paths: Spring_Cloud/config-file
-          username:
-          password:
+          # 在这里不需要密码，可能是因为我在git 命令行窗口访问时，已经输入了密码和账户，
+          uri: https://gitee.com/duofei/config-server
+          skip-ssl-validation: true
+          timeout: 5
+          basedir: E:\GitHub\config-local
+  security:
+    user:
+      name: duofei
+      password: duofei001
 server:
   port: 60020

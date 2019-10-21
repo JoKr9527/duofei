@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      profile: prod
+      label: master
+      uri: http://localhost:60020/
+      name: duofei
+      username: duofei
+      password: duofei001
+server:
+  port: 60021
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: refresh
