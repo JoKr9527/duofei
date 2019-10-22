@@ -1,6 +1,6 @@
 spring:
   application:
-    name: duofei
+    name: config-server
   profiles:
     active: dev,test
   cloud:
@@ -12,9 +12,18 @@ spring:
           skip-ssl-validation: true
           timeout: 5
           basedir: E:\GitHub\config-local
+      name: duofei
   security:
     user:
       name: duofei
       password: duofei001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1113/eureka/
+  instance:
+    metadata-map:
+      password: duofei001
+      user: duofei
 server:
   port: 60020

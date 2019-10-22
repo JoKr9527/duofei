@@ -14,14 +14,16 @@ spring:
       profile: prod
       label: master
       name: duofei
-      username: duofei
-      password: duofei001
 server:
   port: 60022
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:1113/eureka/
+  config-server:
+    metadata-map:
+      password: duofei001
+      user: duofei
 management:
   endpoint:
     health:
@@ -29,4 +31,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh
+        include: refresh, bus-refresh

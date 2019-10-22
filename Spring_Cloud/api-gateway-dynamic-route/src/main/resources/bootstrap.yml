@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    config:
+      uri: http://localhost:60020/
+      username: duofei
+      password: duofei001
+server:
+  port: 60011
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1112/eureka/
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: refresh

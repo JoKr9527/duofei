@@ -32,7 +32,7 @@ public class OldApp {
 
         // for this simple example quickstart, make the SecurityManager
         // accessible as a JVM singleton.  Most applications wouldn't do this
-        // and instead rely on their container configuration or web.xml for
+        // and instead rely on their container config or web.xml for
         // webapps.  That is outside the scope of this simple quickstart, so
         // we'll just do the bare minimum so you can continue to get a feel
         // for things.
