@@ -6,9 +6,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:1112/eureka/
 server:
-  servlet:
-    context-path: /consumer
-  port: 8081
+  port: 8079
 hystrix:
   command:
     default:
@@ -21,3 +19,11 @@ ribbon:
   ReadTimeout: 2000
   maxAutoRetries: 2
   retryableStatusCodes: 500
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: refresh, bus-refresh, hystrix.stream

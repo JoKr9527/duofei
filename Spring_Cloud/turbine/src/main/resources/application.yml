@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: turbine
+server:
+  port: 8078
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1112/eureka/
+turbine:
+  aggregator:
+    cluster-config: FEIGN-CONSUMER, SERVICE-CONSUMER
+  # 使用同一主机上的服务通过主机号与端口号组合进行区分
+  combine-host-port: true
+  # 服务实例名
+  app-config: feign-consumer,service-consumer

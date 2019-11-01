@@ -29,6 +29,8 @@
         <module>api-gateway-dynamic-filter</module>
         <module>config-client-eureka</module>
         <module>stream-hello</module>
+        <module>hystrix-dashboard</module>
+        <module>turbine</module>
     </modules>
 
     <dependencyManagement>

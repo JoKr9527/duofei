@@ -8,7 +8,9 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 /**
  * hello 请求处理
@@ -48,5 +50,15 @@ public class HelloController {
     @PostMapping("/hello3")
     public String hello(@RequestBody User user){
         return "Hello " + user.getName() + ", " + user.getAge();
+    }
+
+    @PostMapping("/hello4")
+    public List<String> hello4(@RequestBody List<String> names) {
+        return names.stream().map(name -> "hello" + name).collect(Collectors.toList());
+    }
+
+    @GetMapping("/hello5")
+    public String hello4(@RequestParam String name) {
+        return "hello" + name;
     }
 }

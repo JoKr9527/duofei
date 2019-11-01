@@ -22,4 +22,14 @@ ribbon:
   ConnectTimeout: 2000
   ReadTimeout: 2000
   maxAutoRetries: 2
-
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+feign:
+  hystrix:
+    enabled: true
