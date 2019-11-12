@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: consul-server-lookup
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+server:
+  port: 8095

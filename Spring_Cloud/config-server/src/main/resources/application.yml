@@ -12,6 +12,9 @@ spring:
           skip-ssl-validation: true
           timeout: 5
           basedir: E:\GitHub\config-local
+          clone-on-start: true
+        svn:
+          uri:
       name: duofei
   security:
     user:

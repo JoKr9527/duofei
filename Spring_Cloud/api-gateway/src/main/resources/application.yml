@@ -15,3 +15,17 @@ zuul:
     api-b:
       path: /api-b/**
       serviceId: feign-consumer
+    api-a-url:
+      # 配置对路径 /api-a-url/ 的所有访问将会路由到  http://localhost:8080/provider/ 服务上
+      path: /api-a-url/**
+      url: http://localhost:8080/provider/
+    api-b-url:
+      # 配置对路径 /api-b-url/ 的所有访问将会路由到 http://localhost:8082/ 服务上
+      path: /api-b-url/**
+      serviceId: http://localhost:8082/
+  ignored-services: '*'
+management:
+  endpoints:
+    web:
+      exposure:
+        include: routes, filters

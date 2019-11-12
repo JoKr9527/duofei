@@ -31,6 +31,8 @@
         <module>stream-hello</module>
         <module>hystrix-dashboard</module>
         <module>turbine</module>
+        <module>consul-server-register</module>
+        <module>consul-server-lookup</module>
     </modules>
 
     <dependencyManagement>

@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: consul-server-register
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+server:
+  port: 8090
+management:
+  server:
+    port: 8091
