@@ -9,6 +9,7 @@ spring:
       name: duofei
       username: duofei
       password: duofei001
+      fail-fast: true
 server:
   port: 60021
 management:

@@ -1,2 +1,16 @@
 server:
   port: 60030
+spring:
+  cloud:
+    stream:
+        bindings:
+          echoTalkSend:
+            destination: echo
+          echoTalkRec:
+            destination: echo
+            group: helloD
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bindings,channels

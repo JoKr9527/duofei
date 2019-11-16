@@ -31,4 +31,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh, bus-refresh
+        include: refresh, bus-refresh, bus-env
+duofei:
+  test:
+    pro: hello,world
