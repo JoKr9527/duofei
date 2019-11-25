@@ -1,0 +1,6 @@
+spring:
+  derby:
+    user-name: duofei111
+    password: duofei001
+  main:
+    allow-bean-definition-overriding: true

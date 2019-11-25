@@ -7,7 +7,7 @@ import java.util.concurrent.CountDownLatch;
  * @author duofei
  * @date 2019/11/19
  */
-public class Driver {
+public class DriverInterrupted {
 
     public static void main(String[] args) throws InterruptedException{
         int workerNumber = 10;
@@ -15,7 +15,8 @@ public class Driver {
         CountDownLatch doneSignal = new CountDownLatch(workerNumber);
 
         for (int i = 0; i < 10 ; i++) {
-            new Thread(new Worker(startSignal, doneSignal)).start();
+            final Thread thread = new Thread(new Worker(startSignal, doneSignal));
+            thread.start();
         }
 
         System.out.println("工作都准备完毕！");

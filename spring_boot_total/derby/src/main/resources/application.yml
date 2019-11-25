@@ -1,0 +1,4 @@
+spring:
+  derby:
+    user-name: duofei
+    password: duofei001
