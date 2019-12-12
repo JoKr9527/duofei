@@ -8,6 +8,7 @@
         <module>examples</module>
         <module>derby</module>
         <module>derby_auto</module>
+        <module>cache-study</module>
     </modules>
 
     <parent>
