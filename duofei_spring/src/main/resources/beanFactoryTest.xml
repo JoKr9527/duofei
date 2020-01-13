@@ -6,4 +6,13 @@
     <bean id="myTestBean" class="com.duofei.beans.MyTestBean">
     </bean>
 
+    <bean id="testA" class="com.duofei.beans.TestA" scope="prototype">
+        <property name="testB" ref="testB"></property>
+    </bean>
+    <bean id="testB" class="com.duofei.beans.TestB" scope="prototype">
+        <!--<property name="testC" ref="testC"></property>-->
+    </bean>
+    <bean id="testC" class="com.duofei.beans.TestC" scope="prototype">
+        <property name="testA" ref="testA"></property>
+    </bean>
 </beans>

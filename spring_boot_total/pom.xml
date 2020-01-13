@@ -9,6 +9,7 @@
         <module>derby</module>
         <module>derby_auto</module>
         <module>cache-study</module>
+        <module>redis-study</module>
     </modules>
 
     <parent>

@@ -22,6 +22,9 @@ public class BeanFactoryTest {
     public void testSimpleLoaded(){
         BeanFactory beanFactory = new ClassPathXmlApplicationContext("beanFactoryTest.xml");
         MyTestBean myTestBean = (MyTestBean)beanFactory.getBean("myTestBean");
+        TestA testA = (TestA)beanFactory.getBean("testA");
+        System.out.println(testA.getTestB());
+        System.out.println(((TestA) beanFactory.getBean("testA")).getTestB());
         System.out.println(myTestBean.getTestStr());
     }
 }
