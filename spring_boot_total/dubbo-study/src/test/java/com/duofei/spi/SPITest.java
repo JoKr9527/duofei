@@ -44,4 +44,13 @@ public class SPITest {
     public void wrapper(){
         spiService.wrapper();
     }
+
+    @Test
+    public void getProtocol(){
+        spiService.getProtocol();
+    }
+
+    @Test
+    public void getLoadBalance(){spiService.getLoadBalance();}
+
 }

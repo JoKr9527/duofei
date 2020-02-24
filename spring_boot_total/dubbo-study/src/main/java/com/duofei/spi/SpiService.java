@@ -2,6 +2,8 @@ package com.duofei.spi;
 
 import org.apache.dubbo.common.URL;
 import org.apache.dubbo.common.extension.ExtensionLoader;
+import org.apache.dubbo.rpc.Protocol;
+import org.apache.dubbo.rpc.cluster.LoadBalance;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -47,4 +49,13 @@ public class SpiService {
         customRobot.showColor(URL.valueOf("dubbo://127.0.0.1:9092?key=bumblebee"));
     }
 
+    public void getProtocol(){
+        ExtensionLoader<Protocol> extensionLoader = ExtensionLoader.getExtensionLoader(Protocol.class);
+        extensionLoader.getAdaptiveExtension();
+    }
+
+    public void getLoadBalance(){
+        ExtensionLoader<LoadBalance> extensionLoader = ExtensionLoader.getExtensionLoader(LoadBalance.class);
+        extensionLoader.getAdaptiveExtension();
+    }
 }

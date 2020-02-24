@@ -1,0 +1,38 @@
+#provider 环境
+dubbo:
+  application:
+    name: dubbo-study
+  protocol:
+    name: dubbo
+    port: 21810
+  provider:
+    register: true
+    registry:
+      protocol: zookeeper
+      address: zookeeper://192.168.3.18:2181
+  config:
+    override: true
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  profiles: provider
+---
+#consumer 环境
+dubbo:
+  application:
+    name: dubbo-study
+  protocol:
+    name: dubbo
+    port: 21810
+  provider:
+    register: false
+  config:
+    override: true
+  consumer:
+    registry:
+      protocol: zookeeper
+      address: zookeeper://192.168.3.18:2181
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  profiles: consumer
