@@ -11,6 +11,7 @@
         <module>cache-study</module>
         <module>redis-study</module>
         <module>dubbo-study</module>
+        <module>dubbo-study-reference</module>
     </modules>
 
     <properties>

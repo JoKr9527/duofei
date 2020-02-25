@@ -13,8 +13,8 @@ import java.util.stream.Stream;
  * @date 2020/1/16
  */
 @Service(interfaceClass = UserService.class)
-@Profile("provider")
 public class UserServiceImpl implements UserService {
+
     @Override
     public List<String> getDefaultUserNames() {
         return Stream.of("num1", "num2").collect(Collectors.toList());

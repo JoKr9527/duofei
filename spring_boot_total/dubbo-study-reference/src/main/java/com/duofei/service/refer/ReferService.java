@@ -2,7 +2,6 @@ package com.duofei.service.refer;
 
 import com.duofei.service.UserService;
 import org.apache.dubbo.config.annotation.Reference;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,7 +12,6 @@ import java.util.List;
  * @date 2020/1/17
  */
 @Service
-@Profile("consumer")
 public class ReferService {
 
     @Reference

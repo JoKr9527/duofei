@@ -13,7 +13,6 @@ import java.util.List;
  * @date 2020/1/17
  */
 @Service
-@Profile("provider")
 public class ExportService {
 
     @Resource
