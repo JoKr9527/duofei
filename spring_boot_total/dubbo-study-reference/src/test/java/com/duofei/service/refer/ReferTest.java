@@ -1,6 +1,7 @@
 package com.duofei.service.refer;
 
 import com.duofei.Application;
+import com.duofei.service.refer.ReferService;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
@@ -10,9 +11,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import java.util.Arrays;
-import java.util.stream.Collectors;
 
 /**
  * 服务引入测试
