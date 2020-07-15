@@ -4,7 +4,10 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:1113/eureka/
+      machine1: http://localhost:1113/eureka/
+    region: djz
+    availability-zones:
+      djz: machine1
 server:
   servlet:
     context-path: /provider

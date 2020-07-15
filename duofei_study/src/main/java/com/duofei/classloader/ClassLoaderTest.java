@@ -16,6 +16,7 @@ public class ClassLoaderTest {
     protected static Test1 test1 ;
 
     public static void main(String[] args) throws Exception {
+
         test11();
         ClassLoader classLoader = new ClassLoader(){
             @Override
