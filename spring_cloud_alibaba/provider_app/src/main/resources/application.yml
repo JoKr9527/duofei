@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        ip: 192.168.3.18
+        namespace: ecbbf883-5744-42e3-b448-09aabee90d7f
+  application:
+    name: provider-app
+server:
+  port: 18083
+management:
+  endpoints:
+    web:
+      exposure:
+        include: nacos-discovery

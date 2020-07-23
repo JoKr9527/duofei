@@ -16,6 +16,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>nacos_discovery</module>
+        <module>provider_app</module>
+        <module>consumer_app</module>
     </modules>
 
     <dependencyManagement>

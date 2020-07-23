@@ -8,12 +8,25 @@ import java.util.Scanner;
  */
 public class Test {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        while(scanner.hasNext()){
-            String next = scanner.next();
-            System.out.println(":" + next);
-            System.out.print("1:" + next);
+        String a = "1";
+        String b = null;
+        if(a1(a) || b1(b) && b2(b)){
+            System.out.println("end");
         }
-        scanner.close();
+    }
+
+    public static boolean a1(String a1){
+        System.out.println("a1");
+        return a1.equals("");
+    }
+
+    public static boolean b1(String b1){
+        System.out.println("b1");
+        return b1 != null;
+    }
+
+    public static boolean b2(String b2){
+        System.out.println("b2");
+        return b2.equals("");
     }
 }
