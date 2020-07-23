@@ -5,6 +5,10 @@ spring:
         server-addr: 127.0.0.1:8848
         ip: 192.168.3.18
         namespace: ecbbf883-5744-42e3-b448-09aabee90d7f
+      config:
+        shared-dataids: provider-user.properties
+        server-addr: 127.0.0.1
+        endpoint: 127.0.0.1
   application:
     name: provider-app
 server:
