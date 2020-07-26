@@ -9,7 +9,7 @@ dubbo:
     register: true
     registry:
       protocol: zookeeper
-      address: zookeeper://192.168.3.18:2181
+      address: zookeeper://192.168.1.3:2181
   config:
     override: true
 spring:
