@@ -17,9 +17,10 @@ public class Solver {
     final CyclicBarrier barrier;
 
     public static void main(String[] args) {
-        Solver solver = new Solver(new float[5][2]);
+        Solver solver = new Solver(new float[2][2]);
 
         for (int i = 0; i < solver.N; i++) {
+            String 我和 = "js";
             final Thread thread = new Thread(solver.new Worker(i));
             thread.start();
             //System.out.println(System.currentTimeMillis() + ": 打断" + thread.getName());
@@ -37,18 +38,19 @@ public class Solver {
 
         @Override
         public void run() {
-            System.out.println("我处理完成第" + myRow + "行");
+            System.out.println(Thread.currentThread().getName() + ": " + "我处理完成第" + myRow + "行");
             try {
-                long start = System.currentTimeMillis();
-                final int await = barrier.await(1000, TimeUnit.NANOSECONDS);
-                System.out.println(System.currentTimeMillis() - start);
-                System.out.println(Thread.currentThread().getName() + ": 我完成了" + myRow+ "行，我是第" + await + "个到达屏障处的");
+                int await = -1;
+                try {
+                    await = barrier.await(1000, TimeUnit.NANOSECONDS);
+                } catch (TimeoutException e) {
+                    e.printStackTrace();
+                }
+                System.out.println(Thread.currentThread().getName() + ": " + "我完成了" + myRow+ "行，我是第" + await + "个到达屏障处的");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (BrokenBarrierException e) {
                 System.out.println(System.currentTimeMillis() + "屏障破坏异常：" + Thread.currentThread().getName());
-                e.printStackTrace();
-            } catch (TimeoutException e) {
                 e.printStackTrace();
             }
         }
@@ -58,12 +60,7 @@ public class Solver {
         data = matrix;
         N = matrix.length;
         barrier = new CyclicBarrier(N, ()->{
-            try {
-                Thread.sleep(10000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println(Thread.currentThread().getName() + "行数据合并");
+            System.out.println(Thread.currentThread().getName() + ": " + "行数据合并");
         });
     }
 }
