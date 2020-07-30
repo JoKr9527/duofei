@@ -1,6 +1,11 @@
 package com.duofei;
 
 import com.alibaba.cloud.sentinel.annotation.SentinelRestTemplate;
+import com.alibaba.csp.sentinel.cluster.ClusterStateManager;
+import com.alibaba.csp.sentinel.cluster.client.config.ClusterClientAssignConfig;
+import com.alibaba.csp.sentinel.cluster.client.config.ClusterClientConfig;
+import com.alibaba.csp.sentinel.cluster.client.config.ClusterClientConfigManager;
+import com.alibaba.csp.sentinel.property.DynamicSentinelProperty;
 import com.duofei.handler.ExceptionUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -29,5 +34,12 @@ public class Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
+        DynamicSentinelProperty<ClusterClientAssignConfig> serverAssignProperty = new DynamicSentinelProperty<>(new ClusterClientAssignConfig("192.168.3.18", 18730));
+        ClusterClientConfigManager.registerServerAssignProperty(serverAssignProperty);
+        ClusterClientConfig clusterClientConfig = new ClusterClientConfig();
+        clusterClientConfig.setRequestTimeout(5000);
+        DynamicSentinelProperty<ClusterClientConfig> clientConfigProperty = new DynamicSentinelProperty<>(clusterClientConfig);
+        ClusterClientConfigManager.registerClientConfigProperty(clientConfigProperty);
+        ClusterStateManager.applyState(0);
     }
 }

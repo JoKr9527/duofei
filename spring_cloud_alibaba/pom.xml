@@ -19,6 +19,7 @@
         <module>provider_app</module>
         <module>consumer_app</module>
         <module>sentinel-app</module>
+        <module>token-server</module>
     </modules>
 
     <dependencyManagement>

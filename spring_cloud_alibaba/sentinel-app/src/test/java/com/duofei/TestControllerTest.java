@@ -24,6 +24,23 @@ public class TestControllerTest {
     private static RestTemplate restTemplate = new RestTemplate();
 
     @Test
+    public void test1() throws InterruptedException {
+        String url = "http://192.168.3.18:18085/hello";
+        int pass = 0;
+        int block = 0;
+        for (int i = 0; i < 500; i++) {
+            final String result = restTemplate.getForObject(url, String.class);
+            Thread.sleep(80);
+            if(result.contains("Sentinel")){
+                pass ++;
+            }else if(result.contains("block")){
+                block ++;
+            }
+        }
+        System.out.println(url + "---- pass " + pass + ", " + "block " + block);
+    }
+
+    @Test
     public void test() throws InterruptedException {
         String writeHelloUrl = "http://192.168.3.18:18085/writeHello";
         String readHelloUrl = "http://192.168.3.18:18085/readHello";
