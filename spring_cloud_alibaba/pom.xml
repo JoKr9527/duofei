@@ -20,6 +20,9 @@
         <module>consumer_app</module>
         <module>sentinel-app</module>
         <module>token-server</module>
+        <module>provider_app_dubbo</module>
+        <module>consumer_app_dubbo</module>
+        <module>common_api</module>
     </modules>
 
     <dependencyManagement>

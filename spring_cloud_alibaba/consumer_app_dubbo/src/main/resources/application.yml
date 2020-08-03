@@ -1,0 +1,12 @@
+dubbo:
+  application:
+    name: consumer_app_dubbo
+  registry:
+    address: nacos://192.168.3.18:8848
+  protocol:
+    port: 20881
+spring:
+  main:
+    allow-bean-definition-overriding: true
+server:
+  port: 18088
